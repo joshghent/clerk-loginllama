@@ -6,7 +6,7 @@ sessions within seconds.
 Clerk checks the password. It does not ask whether the login looks right. A
 correct password from a Tor exit node, a country the user has never been to, or
 a bot that has just tried four thousand other accounts still gets a session.
-This package asks [LoginLlama](https://loginllama.app) about every new session
+This package asks [LoginLlama](https://loginllama.app/?utm_source=npm&utm_medium=readme&utm_campaign=clerk-loginllama) about every new session
 and ends the ones that score high.
 
 ```bash
@@ -35,7 +35,7 @@ Set these in your environment:
 
 | Variable | Where to get it |
 | --- | --- |
-| `LOGINLLAMA_API_KEY` | [loginllama.app/signup](https://loginllama.app/signup). The first 1,000 checks are free. |
+| `LOGINLLAMA_API_KEY` | [loginllama.app/signup](https://loginllama.app/signup?utm_source=npm&utm_medium=readme&utm_campaign=clerk-loginllama). The first 1,000 checks are free. |
 | `CLERK_SECRET_KEY` | Clerk dashboard, **API keys** |
 | `CLERK_WEBHOOK_SIGNING_SECRET` | The webhook endpoint you just made |
 
@@ -50,7 +50,7 @@ score from 0 to 10 and reason codes such as `known_tor_exit_node`,
 their next request.
 
 Every sign-in shows up in the
-[dashboard](https://loginllama.app/account/dashboard) with its score and
+[dashboard](https://loginllama.app/account/dashboard?utm_source=npm&utm_medium=readme&utm_campaign=clerk-loginllama) with its score and
 reasons, and LoginLlama can email the user when it sees a login from somewhere
 new.
 
@@ -81,9 +81,9 @@ LoginLlama marks anything above 5 as risky.
 
 ## Links
 
-- [LoginLlama for Clerk](https://loginllama.app/for-clerk)
-- [LoginLlama docs](https://loginllama.app/docs)
-- [Free IP reputation checker](https://loginllama.app/tools/ip-reputation-checker)
+- [LoginLlama for Clerk](https://loginllama.app/for-clerk?utm_source=npm&utm_medium=readme&utm_campaign=clerk-loginllama)
+- [LoginLlama docs](https://loginllama.app/docs?utm_source=npm&utm_medium=readme&utm_campaign=clerk-loginllama)
+- [Free IP reputation checker](https://loginllama.app/tools/ip-reputation-checker?utm_source=npm&utm_medium=readme&utm_campaign=clerk-loginllama)
 
 ## Licence
 
