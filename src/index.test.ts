@@ -49,10 +49,12 @@ const user = {
 // Stands in for both the Clerk Backend API and the LoginLlama API.
 let score: number | 'down' = 0;
 let calls: { url: string; body?: string }[] = [];
+let source: string | null = null;
 globalThis.fetch = async (input, init) => {
   const url = String(input instanceof Request ? input.url : input);
   calls.push({ url, body: init?.body ? String(init.body) : undefined });
   if (url === 'https://loginllama.app/api/v1/login/check') {
+    source = new Headers(init?.headers).get('x-loginllama-source');
     if (score === 'down') throw new TypeError('fetch failed');
     return Response.json({
       data: { attributes: { risk_score: score, risk_codes: [] } }
@@ -153,4 +155,9 @@ test('refuses to start without an API key', () => {
   } finally {
     if (saved) process.env.LOGINLLAMA_API_KEY = saved;
   }
+});
+
+test('tells LoginLlama which integration sent the check', async () => {
+  await handler(signedWebhook('session.created'));
+  assert.equal(source, 'clerk-loginllama');
 });

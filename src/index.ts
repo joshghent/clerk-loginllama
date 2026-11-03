@@ -54,7 +54,8 @@ export const loginLlamaWebhook = ({
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/vnd.api+json',
-        'X-API-KEY': apiKey!
+        'X-API-KEY': apiKey!,
+        'X-LOGINLLAMA-SOURCE': 'clerk-loginllama'
       },
       body: JSON.stringify(body),
       signal: AbortSignal.timeout(2000)
