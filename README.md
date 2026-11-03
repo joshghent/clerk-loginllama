@@ -81,6 +81,7 @@ LoginLlama marks anything above 5 as risky.
 
 ## Links
 
+- [Step-by-step guide for Clerk](https://loginllama.app/blog/clerk-suspicious-login-detection?utm_source=npm&utm_medium=readme&utm_campaign=clerk-loginllama)
 - [LoginLlama for Clerk](https://loginllama.app/for-clerk?utm_source=npm&utm_medium=readme&utm_campaign=clerk-loginllama)
 - [LoginLlama docs](https://loginllama.app/docs?utm_source=npm&utm_medium=readme&utm_campaign=clerk-loginllama)
 - [Free IP reputation checker](https://loginllama.app/tools/ip-reputation-checker?utm_source=npm&utm_medium=readme&utm_campaign=clerk-loginllama)
