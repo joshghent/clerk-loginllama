@@ -1,6 +1,6 @@
 {
   "name": "clerk-loginllama",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Score every Clerk sign-in with LoginLlama and revoke the risky sessions",
   "type": "module",
   "exports": {
